@@ -1,0 +1,506 @@
+/* Custom styles for Notes app */
+body {
+  background: #f8f9fa;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: none;
+  width: 100%;
+}
+
+.card {
+  word-wrap: break-word;
+}
+
+.list-group-item p {
+  margin-bottom: 0;
+}
+
+/* Paper-style note frame */
+.paper-frame {
+  padding: 0;
+  background: none;
+  border-radius: 0;
+  box-shadow: none;
+  display: flex;
+  justify-content: center;
+}
+
+/* NOTES CONTENT */
+.paper {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 0;
+
+  /* Page-like border */
+  border: 2px solid #333;
+
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+  font-family: "Georgia", "Times New Roman", serif;
+  line-height: 1.8;
+  min-width: 320px;
+  min-height: 500px;
+  width: 95%;
+  max-width: 1600px;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+@media (min-width: 576px) {
+  .paper {
+    padding: 2rem;
+    width: 92%;
+  }
+}
+
+@media (min-width: 768px) {
+  .paper {
+    padding: 2.5rem;
+    width: 90%;
+  }
+}
+
+.note-title {
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+  padding-bottom: 1rem;
+  border-bottom: 2px solid #e0e0e0;
+}
+
+.paper-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+.note-number {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #666;
+  white-space: nowrap;
+  padding-top: 0.5rem;
+  min-width: 100px;
+  text-align: right;
+  border-bottom: 2px solid #e0e0e0;
+  padding-bottom: 1rem;
+}
+
+.note-body {
+  font-size: 1rem;
+  color: #333;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  background-image: 
+    repeating-linear-gradient(
+      to bottom,
+      transparent 0px,
+      transparent 27px,
+      #d0d0d0 27px,
+      #d0d0d0 28px
+    );
+  background-size: 100% 28px;
+  background-position: 0 0;
+  line-height: 28px;
+  padding: 14px;
+  height: 868px;
+  background-attachment: local;
+  flex: 1;
+}
+
+@media (max-width: 768px) {
+  .note-body {
+    height: auto;
+    min-height: 400px;
+  }
+}
+
+.note-line-wrapper {
+  display: flex;
+}
+
+@media (max-width: 768px) {
+  .note-line-wrapper {
+    display: none;
+  }
+}
+
+.note-line-numbers {
+  font-size: 1rem;
+  color: #999;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  background-image: 
+    repeating-linear-gradient(
+      to bottom,
+      transparent 0px,
+      transparent 27px,
+      #d0d0d0 27px,
+      #d0d0d0 28px
+    );
+  background-size: 100% 28px;
+  background-position: 0 0;
+  line-height: 28px;
+  padding: 14px;
+  height: 868px;
+  background-attachment: local;
+  width: 80px;
+  text-align: right;
+  border-right: 1px solid #ddd;
+}
+
+@media (max-width: 768px) {
+  .note-line-numbers {
+    display: none;
+  }
+}
+
+.note-numbers {
+  font-size: 1rem;
+  color: #666;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  background-image: 
+    repeating-linear-gradient(
+      to bottom,
+      transparent 0px,
+      transparent 27px,
+      #d0d0d0 27px,
+      #d0d0d0 28px
+    );
+  background-size: 100% 28px;
+  background-position: 0 0;
+  line-height: 28px;
+  padding: 14px;
+  height: 868px;
+  background-attachment: local;
+  width: 120px;
+  text-align: right;
+  border-left: 2px solid #999;
+}
+
+@media (max-width: 768px) {
+  .note-numbers {
+    height: auto;
+    min-height: 400px;
+    border-left: none;
+    border-top: 2px solid #999;
+  }
+}
+
+/* Ruled Paper Textarea */
+textarea.ruled-paper {
+  background-image: 
+    repeating-linear-gradient(
+      to bottom,
+      transparent 0px,
+      transparent 27px,
+      #d0d0d0 27px,
+      #d0d0d0 28px
+    ) !important;
+  background-size: 100% 28px !important;
+  background-position: 0 0 !important;
+  background-attachment: local !important;
+  background-color: #fff !important;
+  padding: 14px !important;
+  font-family: "Segoe UI", Arial, sans-serif !important;
+  font-size: 1rem !important;
+  line-height: 28px !important;
+  resize: none !important;
+  border: 2px solid #999 !important;
+  border-radius: 0 !important;
+  height: 868px !important;
+  min-height: 868px !important;
+  max-height: 868px !important;
+  width: 100% !important;
+  min-width: 100% !important;
+  max-width: 100% !important;
+  flex: 1;
+  margin: 0 !important;
+  overflow: hidden !important;
+}
+
+.note-input-wrapper {
+  display: flex;
+  gap: 2px;
+  align-items: stretch;
+  flex-direction: row;
+  flex-wrap: nowrap; /* prevent columns from wrapping */
+}
+
+#note-body-container {
+  min-width: 0; /* allow shrinking instead of pushing price column */
+  flex: 1;
+}
+
+.note-numbers-wrapper {
+  flex-shrink: 0; /* prevent shrinking */
+}
+
+/* Ensure body and numbers column inputs have identical dimensions and alignment */
+.body-input-line,
+.number-input-line {
+  box-sizing: border-box;
+  height: 40px;
+  line-height: 40px;
+  font-size: 1rem;
+  font-family: "Segoe UI", Arial, sans-serif;
+}
+
+.number-input-line {
+  text-align: right;
+}
+
+textarea.numbers-input {
+  background-image: 
+    repeating-linear-gradient(
+      to bottom,
+      transparent 0px,
+      transparent 27px,
+      #d0d0d0 27px,
+      #d0d0d0 28px
+    ) !important;
+  background-size: 100% 28px !important;
+  background-position: 0 0 !important;
+  background-attachment: local !important;
+  background-color: #fff !important;
+  padding: 14px !important;
+  font-family: "Segoe UI", Arial, sans-serif !important;
+  font-size: 1rem !important;
+  line-height: 28px !important;
+  resize: none !important;
+  border: 2px solid #999 !important;
+  border-left: 2px solid #999 !important;
+  border-radius: 0 !important;
+  height: 868px !important;
+  min-height: 868px !important;
+  max-height: 868px !important;
+  color: #666 !important;
+  width: 120px !important;
+  min-width: 120px !important;
+  max-width: 120px !important;
+  text-align: right;
+  margin: 0 !important;
+  overflow: hidden !important;
+}
+
+textarea.ruled-paper::placeholder {
+  color: #999;
+}
+
+.summation-section {
+  text-align: right;
+  padding: 1rem 1.5rem;
+  font-size: 1rem;
+  font-weight: bold;
+  color: #333;
+  width: 95%;
+  max-width: 1600px;
+  margin: 1rem auto;
+  box-sizing: border-box;
+}
+
+@media (min-width: 576px) {
+  .summation-section {
+    padding: 1.5rem 2rem;
+    font-size: 1.1rem;
+    width: 92%;
+  }
+}
+
+@media (min-width: 768px) {
+  .summation-section {
+    padding: 2rem 2.5rem;
+    font-size: 1.2rem;
+    width: 90%;
+  }
+}
+
+/* preview container used for client-side PDF export */
+.paper-preview {
+  position: absolute;
+  left: -9999px;
+  top: -9999px;
+  width: 800px;
+}
+
+@media (max-width: 576px) {
+  .paper {
+    padding: 1rem;
+  }
+
+  .paper-preview {
+    width: 320px;
+  }
+  
+  .note-input-wrapper {
+    flex-direction: row;
+    flex-wrap: nowrap;
+  }
+  
+  .note-body-container {
+    flex: 1;
+    min-width: 0;
+  }
+  
+  .note-numbers-wrapper {
+    flex: 0 0 80px;
+  }
+}
+
+/* iPhone 12 Pro Max / iPhone 14 Pro Max responsive adjustments (~428-430px) */
+@media (max-width: 430px) {
+  /* Ensure the 3-column input wrapper never wraps */
+  .note-input-wrapper {
+    flex-wrap: nowrap;
+    gap: 1px;
+  }
+
+  /* Content column shrinks instead of pushing price off-screen */
+  #note-body-container {
+    min-width: 0;
+    flex: 1;
+    overflow-x: hidden;
+  }
+
+  /* Price column: fixed width on mobile */
+  .note-numbers-wrapper {
+    flex: 0 0 96px;
+    width: 96px;
+  }
+
+  /* Line numbers column stays hidden on mobile */
+  .note-line-wrapper {
+    display: none;
+  }
+
+  /* Input fields: identical height, line-height, and box-sizing for perfect alignment */
+  .body-input-line,
+  .number-input-line {
+    box-sizing: border-box;
+    height: 40px;
+    line-height: 40px;
+    margin: 0;
+    padding: 5px;
+    font-size: 0.875rem;
+    font-family: "Segoe UI", Arial, sans-serif;
+    border: none;
+    border-bottom: 1px solid #d0d0d0;
+    background-color: #fff;
+    background-image: repeating-linear-gradient(
+      to bottom,
+      transparent 0px,
+      transparent 39px,
+      #d0d0d0 39px,
+      #d0d0d0 40px
+    );
+    background-size: 100% 40px;
+    background-position: 0 0;
+    background-attachment: local;
+  }
+
+  .body-input-line {
+    padding: 5px 10px;
+  }
+
+  .number-input-line {
+    text-align: right;
+    padding: 5px 5px;
+  }
+
+  /* Ensure the numbers column doesn't have extra borders that break alignment */
+  .note-numbers-column {
+    display: flex;
+    flex-direction: column;
+    border: none;
+  }
+
+  /* Label styling on mobile */
+  .note-numbers-label {
+    font-size: 0.75rem;
+    display: block;
+    margin-bottom: 0.25rem;
+  }
+}
+
+/* Responsive 3-column table (keep semantic markup). Targets phones ~428-430px */
+.responsive-three-col {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed; /* enforce fixed layout so column widths are honored */
+}
+.responsive-three-col th,
+.responsive-three-col td {
+  padding: 0.75rem;
+  vertical-align: middle;
+}
+.responsive-three-col thead th {
+  position: sticky;
+  top: 0;
+  background: #fff;
+  z-index: 3;
+}
+
+/* Specific small-phone rules (iPhone 12/14 Pro Max ~428-430px)
+   - reduce padding
+   - keep headers visible (if using thead)
+   - prevent wrapping in # and price columns
+   - truncate long content with ellipsis
+   - allow horizontal scroll only if needed via existing overflow wrapper
+*/
+@media (max-width: 430px) {
+  .responsive-three-col th,
+  .responsive-three-col td {
+    padding: 0.35rem 0.5rem;
+    font-size: 0.875rem;
+  }
+
+  /* fixed widths and prevent wrapping for first and third columns */
+  .responsive-three-col td:nth-child(1),
+  .responsive-three-col th:nth-child(1) {
+    width: 48px; /* fixed width for line number column */
+    white-space: nowrap;
+  }
+
+  .responsive-three-col td:nth-child(3),
+  .responsive-three-col th:nth-child(3) {
+    width: 110px; /* fixed width for price column */
+    white-space: nowrap;
+    text-align: right;
+  }
+
+  /* truncate the middle/content column with ellipsis */
+  .responsive-three-col td:nth-child(2),
+  .responsive-three-col th:nth-child(2) {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    /* ensure it doesn't push the price column off screen */
+    max-width: calc(100vw - 48px - 110px - 32px); /* viewport minus fixed columns and some padding */
+  }
+
+  /* class-based fallbacks for tables that use column classes */
+  .responsive-three-col .col-num {
+    white-space: nowrap;
+  }
+  .responsive-three-col .col-price {
+    white-space: nowrap;
+  }
+  .responsive-three-col .col-content {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    max-width: calc(100vw - 48px - 110px - 32px);
+  }
+  .responsive-three-col .col-num { width: 48px; }
+  .responsive-three-col .col-price { width: 110px; text-align: right; }
+
+  /* smoother horizontal scrolling if needed */
+  .overflow-x-auto {
+    -webkit-overflow-scrolling: touch;
+  }
+}
